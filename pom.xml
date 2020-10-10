@@ -24,6 +24,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <executions>
                     <execution>
+                        <id>make-assembly</id>
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
@@ -32,7 +33,7 @@
                             <archive>
                                 <manifest>
                                     <mainClass>
-                                        ru.itis.rasimusv.mvnDownloader.app.Program
+                                        ru.itis.rasimusv.mvnDownloader.Main
                                     </mainClass>
                                 </manifest>
                             </archive>
@@ -51,6 +52,13 @@
             <groupId>com.beust</groupId>
             <artifactId>jcommander</artifactId>
             <version>1.78</version>
+        </dependency>
+
+        <dependency>
+            <groupId>ru.itis.rasimusv</groupId>
+            <artifactId>multi-thread-downloader</artifactId>
+            <version>0.2</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
